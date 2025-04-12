@@ -4,8 +4,17 @@
   --color-backgroud: #151515;
   --color-main: #f27d16;
   --color-contrast: #e5efff;
-  --color-primary: #F27D16;
-  --color-focus: #CA640B;
+  --color-primary: #f27d16;
+  --color-focus: #ca640b;
   --color-backgrounDark: #151515;
-}
 
+  --animate-fadeIn: fadeIn 1s ease-in-out forwards;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
