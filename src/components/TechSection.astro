@@ -1,0 +1,49 @@
+---
+const logos = [
+  { name: "Astro" },
+  { name: "Java" },
+  { name: "JavaScript" },
+  { name: "MongoDB" },
+  { name: "MySql" },
+  { name: "Nodejs" },
+  { name: "Php" },
+  { name: "React" },
+  { name: "Spring" },
+  { name: "SqlLite" },
+];
+---
+
+<section class="overflow-hidden justify-center items-center relative">
+  <div class="w-fit animate-scroll flex left-0 justify-center items-center">
+    {[...logos, ...logos, ...logos, ...logos].map((logo, i) => (
+      <div
+        class="items-center justify-center min-w-25 h-25"
+      >
+        <img
+          src={`/assets/techs/${logo.name}.svg`}
+          alt={logo.name}
+          class="w-full h-full p-5 transition-transform duration-300 object-fill mx-20"
+        />
+      </div>
+    ))}
+  </div>
+  <div class="w-3/10 h-25 bg-gradient-to-r from-backgroud to-transparent absolute top-0 left-0"></div>
+  <div class="w-3/10 h-25 bg-gradient-to-l from-backgroud to-transparent absolute top-0 right-0"></div>
+  
+</section>
+
+<style>
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+
+}
+
+.animate-scroll {
+  animation: scroll 50s linear infinite;
+}
+</style>
