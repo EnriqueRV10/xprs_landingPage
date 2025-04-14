@@ -3,10 +3,15 @@ import CopyEmailButton from "./CopyEmailButton.astro";
 import ContactForm from "./ContactForm.astro";
 ---
 
-<section class="h-screen flex flex-row justify-around text-white">
-  <div class="w-1/2 flex flex-col items-center justify-center gap-5 text-2xl">
-    <p class="mb-4">¿Tienes una idea interesante?</p>
-    <p>Puedes encontrarnos en WhatsApp Business</p>
+<section
+  class="min-h-screen flex flex-col lg:flex-row justify-around items-center text-white px-4 py-10 gap-10"
+>
+  <!-- Info / redes -->
+  <div
+    class="w-full lg:w-1/2 flex flex-col items-center justify-center gap-5 text-xl lg:text-2xl"
+  >
+    <p class="mb-4 text-center">¿Tienes una idea interesante?</p>
+    <p class="text-center">Puedes encontrarnos en WhatsApp Business</p>
     <a
       href="https://wa.me/5212215859936"
       target="_blank"
@@ -18,8 +23,8 @@ import ContactForm from "./ContactForm.astro";
         class="w-16 h-16 transition-transform duration-300 transform hover:scale-110"
       />
     </a>
-    <div class="h-px w-72 bg-primary mx-20"></div>
-    <p>Visita nuestra página de Facebook</p>
+    <div class="h-px w-48 bg-primary"></div>
+    <p class="text-center">Visita nuestra página de Facebook</p>
     <a
       href="https://www.facebook.com/share/18wufDvuwq/"
       target="_blank"
@@ -31,11 +36,13 @@ import ContactForm from "./ContactForm.astro";
         class="w-16 h-16 transition-transform duration-300 transform hover:scale-110"
       />
     </a>
-    <div class="h-px w-72 bg-primary mx-20"></div>
-    <p>Envianos un correo</p>
+    <div class="h-px w-48 bg-primary"></div>
+    <p class="text-center">Envíanos un correo</p>
     <CopyEmailButton email="xprs.tec@gmail.com" />
   </div>
-  <div class="w-1/2 flex items-center justify-center">
+
+  <!-- Formulario -->
+  <div class="w-full lg:w-1/2 flex items-center justify-center">
     <ContactForm />
   </div>
 </section>
