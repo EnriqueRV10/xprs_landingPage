@@ -1,0 +1,29 @@
+---
+import CopyEmailButton from "./CopyEmailButton.astro";
+import ContactForm from "./ContactForm.astro";
+---
+
+<section class="h-screen flex flex-row justify-around text-white">
+  <div class="w-1/2 flex flex-col items-center justify-center gap-5 text-2xl">
+    <p class="mb-4">¿Tienes una idea interesante?</p>
+    <p>Puedes encontrarnos en WhatsApp Business</p>
+    <img
+      src="/src/assets/logos/WhatsAppLogo2.svg"
+      alt="WhatsApp_Logo"
+      class="w-16 h-16"
+    />
+    <div class="h-px w-72 bg-primary mx-20"></div>
+    <p>Visita nuestra página de Facebook</p>
+    <img
+      src="/src/assets/logos/SquareFacebookLogo.svg"
+      alt="Facebook_Logo"
+      class="w-16 h-16"
+    />
+    <div class="h-px w-72 bg-primary mx-20"></div>
+    <p>Envianos un correo</p>
+    <CopyEmailButton email="xprs.tec@gmail.com" />
+  </div>
+  <div class="w-1/2 flex items-center justify-center">
+    <ContactForm />
+  </div>
+</section>

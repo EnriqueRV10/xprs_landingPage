@@ -1,0 +1,78 @@
+---
+// CopyEmailButton.astro
+const { email = "tu.email@emprendimiento.com" } = Astro.props;
+---
+
+<div class="relative inline-block">
+  <!-- Botón para copiar email -->
+  <button 
+    id="copyEmailBtn" 
+    class="px-4 py-2 bg-primary text-white text-lg rounded-xl hover:bg-focus transition-colors focus:outline-none focus:ring-2 focus:ring-lightPrimary flex items-center gap-2"
+    aria-label="Copiar correo electrónico"
+    data-email={email}
+  >
+    <!-- Icono de correo -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+    </svg>
+    {email}
+  </button>
+  
+  <!-- Tooltip que aparecerá -->
+  <div 
+    id="copyTooltip" 
+    class="absolute z-10 -top-10 left-1/2 transform -translate-x-1/2 px-3 py-2 bg-gray-800 text-white text-sm rounded shadow transition-opacity opacity-0 pointer-events-none"
+  >
+    ¡Copiado al portapapeles!
+  </div>
+</div>
+
+<script>
+  // Este script se ejecutará en el cliente
+  const copyBtn = document.getElementById('copyEmailBtn');
+  const tooltip = document.getElementById('copyTooltip');
+  
+  if (copyBtn && tooltip) {
+    copyBtn.addEventListener('click', function() {
+      const emailToCopy = this.getAttribute('data-email');
+      
+      // Copiar al portapapeles
+      navigator.clipboard.writeText(emailToCopy)
+        .then(() => {
+          // Mostrar tooltip
+          tooltip.classList.remove('opacity-0');
+          tooltip.classList.add('opacity-100');
+          
+          // Ocultar tooltip después de 2 segundos
+          setTimeout(() => {
+            tooltip.classList.remove('opacity-100');
+            tooltip.classList.add('opacity-0');
+          }, 2000);
+        })
+        .catch(err => {
+          console.error('Error al copiar: ', err);
+          
+          // Fallback para navegadores que no soporten clipboard API
+          const tempInput = document.createElement('input');
+          tempInput.value = emailToCopy;
+          tempInput.style.position = 'absolute';
+          tempInput.style.left = '-9999px';
+          document.body.appendChild(tempInput);
+          tempInput.select();
+          document.execCommand('copy');
+          document.body.removeChild(tempInput);
+          
+          // Mostrar tooltip
+          tooltip.classList.remove('opacity-0');
+          tooltip.classList.add('opacity-100');
+          
+          // Ocultar tooltip después de 2 segundos
+          setTimeout(() => {
+            tooltip.classList.remove('opacity-100');
+            tooltip.classList.add('opacity-0');
+          }, 2000);
+        });
+    });
+  }
+</script>
