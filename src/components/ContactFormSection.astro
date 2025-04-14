@@ -7,18 +7,30 @@ import ContactForm from "./ContactForm.astro";
   <div class="w-1/2 flex flex-col items-center justify-center gap-5 text-2xl">
     <p class="mb-4">¿Tienes una idea interesante?</p>
     <p>Puedes encontrarnos en WhatsApp Business</p>
-    <img
-      src="/src/assets/logos/WhatsAppLogo2.svg"
-      alt="WhatsApp_Logo"
-      class="w-16 h-16"
-    />
+    <a
+      href="https://wa.me/5212215859936"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src="/src/assets/logos/WhatsAppLogo2.svg"
+        alt="WhatsApp_Logo"
+        class="w-16 h-16 transition-transform duration-300 transform hover:scale-110"
+      />
+    </a>
     <div class="h-px w-72 bg-primary mx-20"></div>
     <p>Visita nuestra página de Facebook</p>
-    <img
-      src="/src/assets/logos/SquareFacebookLogo.svg"
-      alt="Facebook_Logo"
-      class="w-16 h-16"
-    />
+    <a
+      href="https://www.facebook.com/share/18wufDvuwq/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src="/src/assets/logos/SquareFacebookLogo.svg"
+        alt="Facebook_Logo"
+        class="w-16 h-16 transition-transform duration-300 transform hover:scale-110"
+      />
+    </a>
     <div class="h-px w-72 bg-primary mx-20"></div>
     <p>Envianos un correo</p>
     <CopyEmailButton email="xprs.tec@gmail.com" />
