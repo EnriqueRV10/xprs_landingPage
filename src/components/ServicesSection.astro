@@ -3,10 +3,10 @@ import Service from "./Service";
 import ImageLaptop from "../images/desarrollo.jpg";
 ---
 
-<h2 class="text-2xl font-bold mb-4">Servicios</h2>
+<h2 class="font-bold text-white text-4xl text-center mb-8">Servicios</h2>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-    <div class="md:border-r border-amber-600">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
+    <div class="md:border-r border-amber-700">
         <Service
             client:visible
             title="Landing Page"
@@ -15,16 +15,7 @@ import ImageLaptop from "../images/desarrollo.jpg";
         />
     </div>
 
-    <div class="md:border-r border-amber-600">
-        <Service
-            client:visible
-            title="Apps multiplataforma"
-            src={ImageLaptop}
-            text="Sitio estatico a la medida que captura la atencion de los consumidores"
-        />
-    </div>
-
-    <div class="md:border-r-0">
+    <div class="md:border-r border-amber-700">
         <Service
             client:visible
             title="SEO"
@@ -32,4 +23,13 @@ import ImageLaptop from "../images/desarrollo.jpg";
             text="Sitio estatico a la medida que captura la atencion de los consumidores"
         />
     </div>
+
+    <div class="md:border-r-0 ">
+        <Service
+            client:visible
+            title="Apps Multiplataforma"
+            src={ImageLaptop}
+            text="Sitio estatico a la medida que captura la atencion de los consumidores"
+        />
+    </div> 
 </div>
