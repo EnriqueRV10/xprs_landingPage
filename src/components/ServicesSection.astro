@@ -1,0 +1,35 @@
+---
+import Service from "./Service";
+import ImageLaptop from "../images/desarrollo.jpg";
+---
+
+<h2 class="text-2xl font-bold mb-4">Servicios</h2>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div class="md:border-r border-amber-600">
+        <Service
+            client:visible
+            title="Landing Page"
+            src={ImageLaptop}
+            text="Sitio estatico a la medida que captura la atencion de los consumidores"
+        />
+    </div>
+
+    <div class="md:border-r border-amber-600">
+        <Service
+            client:visible
+            title="Apps multiplataforma"
+            src={ImageLaptop}
+            text="Sitio estatico a la medida que captura la atencion de los consumidores"
+        />
+    </div>
+
+    <div class="md:border-r-0">
+        <Service
+            client:visible
+            title="SEO"
+            src={ImageLaptop}
+            text="Sitio estatico a la medida que captura la atencion de los consumidores"
+        />
+    </div>
+</div>
