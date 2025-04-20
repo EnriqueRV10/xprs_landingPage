@@ -1,0 +1,59 @@
+
+---
+const { items } = Astro.props;
+---
+
+<section class="my-40 flex flex-col items-center px-4 gap-10 lg:gap-32">
+  <div class="text-white text-center max-w-[700px]">
+    <h1 class="text-3xl font-bold mb-10">Nuestro equipo</h1>
+    <h2 class="text-lg md:text-xl mt-2 text-neutral-400">Conoce al equipo detrás de los proyectos de XPRS, somos un grupo de personas entusiastas que estan comprometidos con entregar proyectos de calidad</h2>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-7xl">
+    {
+      items.map((item: any) => (
+        <article 
+          class="bg-backgrounDark p-6 rounded-2xl text-center ring ring-primary/40 shadow-primary hover:shadow-2xl transition-shadow duration-300" 
+        >
+          <div class="flex flex-col items-center space-y-4">
+            <img src={item.image} alt={`Foto de ${item.name}`} class="rounded-full w-24 h-24 md:w-32 md:h-32 object-cover" />
+            <h2 class="text-lg font-bold text-white">{item.name}</h2>
+            <p class="text-gray-300">{item.role}</p>
+
+            <div class="flex space-x-4 mt-2">
+              <a
+                href={item.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-500 hover:text-blue-600 transition-colors duration-200"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 fill-current"
+                  viewBox="0 0 448 512"
+                >
+                  <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                </svg>
+              </a>
+              <a
+                href={item.portfolio}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-500 hover:text-indigo-600 transition-colors duration-200"
+                aria-label="Ver portafolio"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="w-5 h-5 fill-current"
+                >
+                  <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

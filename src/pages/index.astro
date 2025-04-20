@@ -6,6 +6,16 @@ import ServicesSection from '../components/ServicesSection.astro';
 import TechSection from '../components/TechSection.astro';
 import Layout from '../layouts/Layout.astro';
 import ContactFormSection from '../components/ContactFormSection.astro';
+import TeamSection from '../components/TeamSection.astro';
+
+
+const MembersData = [
+{id:1, name: 'Enrique', image:"/src/assets/team/Sergio.png", role:'Desarrollador Frontend', linkedin:'#', portfolio:'#' },
+{id:2, name: 'Irvyn', image:'/src/assets/team/tailung.jpg',  role:'Desarrollador Frontend', linkedin:'#', portfolio:'#' },
+  {id:3, name: 'Jesus', image:'/src/assets/team/tailung.jpg', role:'Desarrollador Backend', linkedin:'#', portfolio:'#' },
+  {id:4, name: 'Christian', image:'/src/assets/team/tailung.jpg',  role:'Chico de los cafés / mascota', linkedin:'#', portfolio:'#' },
+];
+
 ---
 
 <Layout>
@@ -14,5 +24,6 @@ import ContactFormSection from '../components/ContactFormSection.astro';
 	<AboutSection />
 	<TechSection />
   <ProjectsSection />
+  <TeamSection items={MembersData} />
   <ContactFormSection />
 </Layout>
