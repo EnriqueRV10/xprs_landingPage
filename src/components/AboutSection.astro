@@ -3,14 +3,14 @@ import logo from "./../assets/logos/xprsWhite.svg"
 import Stats from "./Stats"
 ---
 
-<h2 class="font-bold text-amber-600 text-4xl text-left mb-8 ml-4">¿Quienés somos?</h2>
+<h2 class="font-bold text-amber-600 text-4xl text-center md:text-left mb-8 ml-4">¿Quienés somos?</h2>
 
-<div class="grid md:grid-cols-2">
-    <div>
-        <img class="p-4" src={logo.src} alt="logo">
+<div class="grid md:grid-cols-2 mb-8">
+    <div class="flex flex-col items-center justify-items-center">
+        <img class="w-2/3 p-4" src={logo.src} alt="logo">
     </div>
     <div>
-        <p class="font-semibold text-white mb-4 p-2">Equipo desarrollo de software especializado en la creación de soluciones a la medida. Nos apasiona transformar ideas en productos digitales funcionales, atractivos y eficientes.</p>
+        <p class="font-semibold text-center md:text-left text-white mb-4 p-2">Equipo desarrollo de software especializado en la creación de soluciones a la medida. Nos apasiona transformar ideas en productos digitales funcionales, atractivos y eficientes.</p>
         <div class="grid grid-cols-3 gap-4">        
             <Stats
                 highlight="0"
