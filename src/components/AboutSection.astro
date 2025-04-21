@@ -1,17 +1,28 @@
 ---
 import logo from "./../assets/logos/xprsWhite.svg"
+import Stats from "./Stats"
 ---
 
 <h2 class="font-bold text-amber-600 text-4xl text-left mb-8 ml-4">¿Quienés somos?</h2>
 
-<div class="grid grid-cols-2">
+<div class="grid md:grid-cols-2">
     <div>
-        <img src={logo.src} alt="logo">
+        <img class="p-4" src={logo.src} alt="logo">
     </div>
     <div>
-        <p class="font-semibold text-white">Equipo desarrollo de software especializado en la creación de soluciones a la medida. Nos apasiona transformar ideas en productos digitales funcionales, atractivos y eficientes.</p>
-        <div class="grid grid-cols-3">
+        <p class="font-semibold text-white mb-4 p-2">Equipo desarrollo de software especializado en la creación de soluciones a la medida. Nos apasiona transformar ideas en productos digitales funcionales, atractivos y eficientes.</p>
+        <div class="grid grid-cols-3 gap-4">        
+            <Stats
+                highlight="0"
+                description="Clientes" />
 
+            <Stats
+                highlight="0"
+                description="Ventas" />
+
+            <Stats
+                highlight="0"
+                description="Sponsors" />
         </div>
     </div>
 </div>
