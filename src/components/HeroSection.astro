@@ -1,3 +1,8 @@
+---
+import { Image } from "astro:assets";
+import bgHero from "../assets/bgHero.jpg";
+---
+
 <section
   class="flex flex-col md:flex-row items-center justify-center bg-[url(src/assets/bgHero.jpg)] bg-center bg-cover md:bg-backgrounDark md:bg-none min-h-screen px-6 md:px-12"
 >
@@ -21,9 +26,10 @@
     </button>
   </div>
 
-  <img
-    src="src/assets/bgHero.jpg"
+  <Image
+    src={bgHero}
     alt="bgHero"
     class="hidden md:block md:w-1/2 object-cover"
+    loading="eager"
   />
 </section>
