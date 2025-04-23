@@ -9,6 +9,7 @@ const Project = ({ project }) => {
         src={project.image}
         alt={project.title}
         className="rounded-lg h-64 object-contain mb-4 w-full"
+        loading="lazy"
       />
       <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
       <p className="text-md text-gray-600 mb-3">{project.description}</p>

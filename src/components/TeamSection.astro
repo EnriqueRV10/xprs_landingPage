@@ -1,22 +1,32 @@
-
 ---
+import { Image } from "astro:assets";
+
 const { items } = Astro.props;
 ---
 
 <section class="my-40 flex flex-col items-center px-4 gap-10 lg:gap-32">
   <div class="text-white text-center max-w-[700px]">
     <h1 class="text-3xl font-bold mb-10">Nuestro equipo</h1>
-    <h2 class="text-lg md:text-xl mt-2 text-neutral-400">Conoce al equipo detrás de los proyectos de XPRS, somos un grupo de personas entusiastas que estan comprometidos con entregar proyectos de calidad</h2>
+    <h2 class="text-lg md:text-xl mt-2 text-neutral-400">
+      Conoce al equipo detrás de los proyectos de XPRS, somos un grupo de
+      personas entusiastas que estan comprometidos con entregar proyectos de
+      calidad
+    </h2>
   </div>
 
   <div class="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-7xl">
     {
       items.map((item: any) => (
-        <article 
-          class="bg-backgrounDark p-6 rounded-2xl text-center ring ring-primary/40 shadow-primary hover:shadow-2xl transition-shadow duration-300" 
-        >
+        <article class="bg-backgrounDark p-6 rounded-2xl text-center ring ring-primary/40 shadow-primary hover:shadow-2xl transition-shadow duration-300">
           <div class="flex flex-col items-center space-y-4">
-            <img src={item.image} alt={`Foto de ${item.name}`} class="rounded-full w-24 h-24 md:w-32 md:h-32 object-cover" />
+            <Image
+              src={item.image}
+              alt={`Foto de ${item.name}`}
+              class="rounded-full w-24 h-24 md:w-32 md:h-32 object-cover"
+              loading="lazy"
+              width={128}
+              height={128}
+            />
             <h2 class="text-lg font-bold text-white">{item.name}</h2>
             <p class="text-gray-300">{item.role}</p>
 
