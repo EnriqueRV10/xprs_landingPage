@@ -44,13 +44,13 @@ const ProjectsSection = () => {
         <Project project={projects[currentIndex]} full />
         <button
           onClick={handlePrev}
-          className="absolute left-0 text-3xl px-4 py-2 bg-white rounded-full shadow hover:bg-gray-200"
+          className="absolute left-0 text-3xl px-4 py-2 bg-white/50 rounded-full shadow hover:bg-gray-200/20 cursor-pointer font-bold text-white"
         >
           &#60;
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-0 text-3xl px-4 py-2 bg-white rounded-full shadow hover:bg-gray-200"
+          className="absolute right-0 text-3xl px-4 py-2 bg-white/50 rounded-full shadow hover:bg-gray-200/20 cursor-pointer font-bold text-white"
         >
           &#62;
         </button>
