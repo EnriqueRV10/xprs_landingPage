@@ -36,8 +36,8 @@ const Service: React.FC<ServiceCardProps> = ({ title, src, text }) => {
         <p className="text-white w-64 mb-6">{text}</p>
         <input
           type="button"
-          value="más información"
-          className="border border-amber-600 font-semibold text-xl text-white p-2 hover:text-amber-600"
+          value="Más información"
+          className="border border-amber-600 font-semibold text-xl text-white px-4 py-2 hover:text-amber-600 rounded-xl"
         />
       </div>
     </div>

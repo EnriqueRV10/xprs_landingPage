@@ -4,14 +4,14 @@ import ContactForm from "./ContactForm.astro";
 ---
 
 <section
-  class="min-h-screen flex flex-col lg:flex-row justify-around items-center text-white px-4 py-10 gap-10"
+    class="h-1/2 flex flex-col lg:flex-row justify-around items-center text-white px-4 py-10 gap-10"
 >
   <!-- Info / redes -->
   <div
-    class="w-full lg:w-1/2 flex flex-col items-center justify-center gap-5 text-xl lg:text-2xl"
+    class="w-full lg:w-1/2 flex flex-col items-center justify-center gap-5 text-lg"
   >
-    <p class="mb-4 text-center">¿Tienes una idea interesante?</p>
-    <p class="text-center">Puedes encontrarnos en WhatsApp Business</p>
+    <p class="mb-4 text-4xl font-bold">Contáctanos</p>
+    <p class="text-center ">Puedes encontrarnos en WhatsApp Business</p>
     <a
       href="https://wa.me/5212215859936"
       target="_blank"
@@ -42,6 +42,8 @@ import ContactForm from "./ContactForm.astro";
     <p class="text-center">Envíanos un correo</p>
     <CopyEmailButton email="xprs.tec@gmail.com" />
   </div>
+
+  <p class="text-2xl hidden md:block">ó</p>
 
   <!-- Formulario -->
   <div class="w-full lg:w-1/2 flex items-center justify-center">

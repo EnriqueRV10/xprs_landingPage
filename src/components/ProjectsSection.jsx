@@ -35,8 +35,8 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section className="w-full flex flex-col items-center justify-center px-4 py-10 relative">
-      <h2 className="text-3xl font-bold mb-6 text-center text-white">
+    <section className="w-full flex flex-col items-center justify-center px-4 py-10 md:pt-40 relative">
+      <h2 className="text-4xl font-bold mb-6 text-center text-white">
         Proyectos
       </h2>
 

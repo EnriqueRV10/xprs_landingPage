@@ -2,34 +2,35 @@
 import Service from "./Service";
 import ImageLaptop from "../images/desarrollo.jpg";
 ---
+<section class="my-10">
+  <h2 class="font-bold text-white text-4xl text-center mb-8">Servicios</h2>
 
-<h2 class="font-bold text-white text-4xl text-center mb-8">Servicios</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
+      <div class="md:border-r border-amber-700">
+          <Service
+              client:visible
+              title="Landing Page"
+              src={ImageLaptop}
+              text="Sitio estatico a la medida que captura la atencion de los consumidores"
+          />
+      </div>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
-    <div class="md:border-r border-amber-700">
-        <Service
-            client:visible
-            title="Landing Page"
-            src={ImageLaptop}
-            text="Sitio estatico a la medida que captura la atencion de los consumidores"
-        />
-    </div>
+      <div class="md:border-r border-amber-700">
+          <Service
+              client:visible
+              title="SEO"
+              src={ImageLaptop}
+              text="Sitio estatico a la medida que captura la atencion de los consumidores"
+          />
+      </div>
 
-    <div class="md:border-r border-amber-700">
-        <Service
-            client:visible
-            title="SEO"
-            src={ImageLaptop}
-            text="Sitio estatico a la medida que captura la atencion de los consumidores"
-        />
-    </div>
-
-    <div class="md:border-r-0 ">
-        <Service
-            client:visible
-            title="Apps Multiplataforma"
-            src={ImageLaptop}
-            text="Sitio estatico a la medida que captura la atencion de los consumidores"
-        />
-    </div> 
-</div>
+      <div class="md:border-r-0 ">
+          <Service
+              client:visible
+              title="Apps Multiplataforma"
+              src={ImageLaptop}
+              text="Sitio estatico a la medida que captura la atencion de los consumidores"
+          />
+      </div> 
+  </div>
+</section>
