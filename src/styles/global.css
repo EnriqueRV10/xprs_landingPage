@@ -8,6 +8,7 @@
   --color-focus: #ca640b;
   --color-backgrounDark: #151515;
   --color-lightPrimary: #f9be8b;
+  --breakpoint-xs: 570px;
 
   --animate-fadeIn: fadeIn 1s ease-in-out forwards;
   @keyframes fadeIn {
