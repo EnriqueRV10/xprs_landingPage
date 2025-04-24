@@ -6,17 +6,35 @@ const projects = [
     title: "BioCollector",
     description:
       "BioCollector es una aplicación móvil diseñada para la Facultad de Biología, que facilita y optimiza el proceso de recopilación y registro de datos biológicos en campo.",
-    tags: ["react native", "JavaScript"],
-    image: "/assets/projects/WhatsAppLogo1.png",
+    tags: ["React Native","Pocket Base", "SQLite"],
+    image: "/src/assets/projects/biocollector.png",
     repoUrl: "https://github.com/JesusPichon/Aplicacion_Biologia",
   },
   {
-    title: "BioCollector 2",
+    title: "Reko: ChatBot",
+    description:
+      "Sistema para la gestion de tareas en Notion utilizando el servicio de mensajeria Whatsapp.(1° Hackathon | Puebla)",
+    tags: ["Express","Notion","JavaScript"],
+    image: "/src/assets/projects/rekochatbot.png",
+    repoUrl: "https://github.com/JesusPichon/Aplicacion_Biologia",
+    projectUrl: "#",
+  },
+  {
+    title: "SOTM",
+    description:
+      "Aplicación que permite encontrar la ruta mas corta entre las estaciones del metro de la ciudad de México. (3° Fepro 2022 | Puebla)",
+    tags: ["Java", "Apache","JSP", "Ajax"],
+    image: "/src/assets/projects/sotm.png",
+    repoUrl: "https://github.com/JesusPichon/Sistema-Orientacion-Transporte-Metro",
+    projectUrl: "#",
+  },
+  {
+    title: "YOTeCuido",
     description:
       "BioCollector es una aplicación móvil diseñada para la Facultad de Biología, que facilita y optimiza el proceso de recopilación y registro de datos biológicos en campo.",
-    tags: ["react native", "JavaScript"],
-    image: "/images/BioCollector.png",
-    repoUrl: "https://github.com/JesusPichon/Aplicacion_Biologia",
+    tags: ["Java","SpringBoot"],
+    image: "/src/assets/projects/yotecuido.png",
+    repoUrl: "https://github.com/JesusPichon/api-enfermeras",
     projectUrl: "#",
   },
 ];
