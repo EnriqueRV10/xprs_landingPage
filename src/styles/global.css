@@ -1,3 +1,9 @@
+@font-face {
+  font-family: poppins;
+  src: url('/src/assets/fonts/Poppins-Regular.woff2')
+}
+
+
 @import "tailwindcss";
 
 @theme {
@@ -10,6 +16,8 @@
   --color-lightPrimary: #f9be8b;
   --breakpoint-xs: 570px;
 
+  --font-poppins: poppins, sans-serif;
+
   --animate-fadeIn: fadeIn 1s ease-in-out forwards;
   @keyframes fadeIn {
     0% {
@@ -19,4 +27,8 @@
       opacity: 1;
     }
   }
+}
+
+body {
+  @apply font-poppins;
 }
