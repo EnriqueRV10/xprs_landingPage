@@ -7,6 +7,7 @@ import prettier from "eslint-config-prettier";
 import { defineConfig } from "eslint/config";
 
 export default defineConfig([
+  ...pluginAstro.configs.recommended,
   // Configuración general para JS, TS, JSX, TSX
   {
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
@@ -39,7 +40,7 @@ export default defineConfig([
     plugins: {
       astro: pluginAstro,
     },
-    extends: ["plugin:astro/recommended"],
+
     rules: {},
   },
 
