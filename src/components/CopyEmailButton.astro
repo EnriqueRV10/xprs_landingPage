@@ -42,7 +42,7 @@ const { email = "tu.email@emprendimiento.com" } = Astro.props;
 
   if (copyBtn && tooltip) {
     copyBtn.addEventListener("click", function () {
-      const emailToCopy = this.getAttribute("data-email");
+      const emailToCopy = this.getAttribute("data-email") || "";
 
       // Copiar al portapapeles
       navigator.clipboard
