@@ -34,11 +34,11 @@ const Service: React.FC<ServiceCardProps> = ({ title, src, text }) => {
         className={`text-center transition-opacity duration-300 ${visible ? "md:opacity-100" : "md:opacity-0"}`}
       >
         <p className="text-white w-64 mb-6">{text}</p>
-        <input
+        {/*<input
           type="button"
           value="Más información"
           className="border border-amber-600 font-semibold text-xl text-white px-4 py-2 hover:text-amber-600 rounded-xl"
-        />
+        />*/}
       </div>
     </div>
   );
