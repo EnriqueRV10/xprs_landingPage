@@ -6,7 +6,7 @@ const projects = [
     title: "BioCollector",
     description:
       "BioCollector es una aplicación móvil diseñada para la Facultad de Biología, que facilita y optimiza el proceso de recopilación y registro de datos biológicos en campo.",
-    tags: ["React Native","Pocket Base", "SQLite"],
+    tags: ["React Native", "Pocket Base", "SQLite"],
     image: "/src/assets/projects/biocollector.png",
     repoUrl: "https://github.com/JesusPichon/Aplicacion_Biologia",
   },
@@ -14,7 +14,7 @@ const projects = [
     title: "Reko: ChatBot",
     description:
       "Sistema para la gestion de tareas en Notion utilizando el servicio de mensajeria Whatsapp.(1° Hackathon | Puebla)",
-    tags: ["Express","Notion","JavaScript"],
+    tags: ["Express", "Notion", "JavaScript"],
     image: "/src/assets/projects/rekochatbot.png",
     repoUrl: "https://github.com/JesusPichon/Aplicacion_Biologia",
     projectUrl: "#",
@@ -23,16 +23,17 @@ const projects = [
     title: "SOTM",
     description:
       "Aplicación que permite encontrar la ruta mas corta entre las estaciones del metro de la ciudad de México. (3° Fepro 2022 | Puebla)",
-    tags: ["Java", "Apache","JSP", "Ajax"],
+    tags: ["Java", "Apache", "JSP", "Ajax"],
     image: "/src/assets/projects/sotm.png",
-    repoUrl: "https://github.com/JesusPichon/Sistema-Orientacion-Transporte-Metro",
+    repoUrl:
+      "https://github.com/JesusPichon/Sistema-Orientacion-Transporte-Metro",
     projectUrl: "#",
   },
   {
     title: "YOTeCuido",
     description:
       "BioCollector es una aplicación móvil diseñada para la Facultad de Biología, que facilita y optimiza el proceso de recopilación y registro de datos biológicos en campo.",
-    tags: ["Java","SpringBoot"],
+    tags: ["Java", "SpringBoot"],
     image: "/src/assets/projects/yotecuido.png",
     repoUrl: "https://github.com/JesusPichon/api-enfermeras",
     projectUrl: "#",
@@ -53,7 +54,10 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section className="w-full flex flex-col items-center justify-center px-4 py-10 md:pt-40 relative">
+    <section
+      className="w-full flex flex-col items-center justify-center px-4 py-10 md:pt-40 relative"
+      id="projects"
+    >
       <h2 className="text-4xl font-bold mb-6 text-center text-white">
         Proyectos
       </h2>
