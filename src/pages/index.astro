@@ -46,15 +46,3 @@ const MembersData = [
   <TeamSection items={MembersData} />
   <ContactFormSection />
 </Layout>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    if (window.location.hash) {
-      window.location.hash = ""; // Limpia el hash
-      const heroElement = document.querySelector("#hero");
-      if (heroElement) {
-        heroElement.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  });
-</script>
