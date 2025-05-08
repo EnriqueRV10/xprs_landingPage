@@ -2,6 +2,7 @@
 import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import "../styles/global.css";
+import 'swiper/element/bundle';
 ---
 
 <!doctype html>
@@ -17,6 +18,10 @@ import "../styles/global.css";
       <slot />
     </main>
     <Footer />
+    <script type="module" is:inline>
+      import { register } from 'swiper/element/bundle';
+      register();
+    </script>
   </body>
 </html>
 
