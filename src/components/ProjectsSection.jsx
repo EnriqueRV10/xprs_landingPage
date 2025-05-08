@@ -1,4 +1,11 @@
-import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import 'swiper/css/effect-coverflow';
+import './ProjectStyle.css';
+
 import Project from "./Project";
 
 const projects = [
@@ -32,7 +39,7 @@ const projects = [
   {
     title: "YOTeCuido",
     description:
-      "BioCollector es una aplicación móvil diseñada para la Facultad de Biología, que facilita y optimiza el proceso de recopilación y registro de datos biológicos en campo.",
+      "YoTeCuido es una aplicación web diseñada para conectar a usuarios con enfermeras disponibles en su localidad de forma rápida y eficiente. La plataforma facilita la búsqueda y el contacto directo con profesionales de enfermería, brindando apoyo en momentos críticos de salud (Hackathon del Tecnológico de Monterrey).",
     tags: ["Java", "SpringBoot"],
     image: "/assets/projects/yotecuido.png",
     repoUrl: "https://github.com/JesusPichon/api-enfermeras",
@@ -41,18 +48,6 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
-    console.log(currentIndex);
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
-    console.log(currentIndex);
-  };
-
   return (
     <section
       className="w-full flex flex-col items-center justify-center px-4 py-10 md:pt-40 relative"
@@ -62,20 +57,33 @@ const ProjectsSection = () => {
         Proyectos
       </h2>
 
-      <div className="relative w-full max-w-4xl h-[70%] flex items-center justify-center">
-        <Project project={projects[currentIndex]} full />
-        <button
-          onClick={handlePrev}
-          className="absolute left-0 text-3xl px-4 py-2 bg-white/50 rounded-full shadow hover:bg-gray-200/20 cursor-pointer font-bold text-white"
+      <div className="w-full max-w-4xl">
+        <Swiper
+          effect={'coverflow'}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          loop
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 100,
+            depth: 300,
+            slideShadows: true,
+            scale: 0.5,
+          }}
+          navigation
+          modules={[EffectCoverflow, Navigation]}
+          className="mySwiper"
+          style={{
+            '--swiper-navigation-color': '#fff',
+            '--swiper-pagination-color': '#fff',
+          }}
         >
-          &#60;
-        </button>
-        <button
-          onClick={handleNext}
-          className="absolute right-0 text-3xl px-4 py-2 bg-white/50 rounded-full shadow hover:bg-gray-200/20 cursor-pointer font-bold text-white"
-        >
-          &#62;
-        </button>
+          {projects.map((project, index) => (
+            <SwiperSlide key={index}>
+              <Project project={project} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
